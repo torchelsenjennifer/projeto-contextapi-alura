@@ -7,6 +7,7 @@ import { useContext } from "react";
 
 function Login() {
   const history = useHistory();
+  const teste = () => history.push("/feira");
   const { nome, setNome, saldo, setSaldo } = useContext(UsuarioContext);
   return (
     <Container>
@@ -33,7 +34,7 @@ function Login() {
         variant="contained"
         color="primary"
         disabled={nome.lenght < 4}
-        onClick={() => history.push("/feira")}
+        onClick={teste}
       >
         Avançar
       </Button>
